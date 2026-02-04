@@ -10,14 +10,14 @@
 
 </head>
 <body>
-    <button id="btnTeste">Clique para Testar</button>
+    <button id="btnContinuar">Continuar</button>
 
     <script>
-        const btn = document.getElementById('btnTeste');
+        const btn = document.getElementById('btnContinuar');
         
         btn.addEventListener('click', () => {
-            // Envia uma mensagem para o "Pai" (o site que segura o iframe)
-            window.parent.postMessage('O botão foi clicado!', '*');
+            // Envia uma mensagem para o site do domínio principal
+            window.parent.postMessage('O "continuar" foi clicado', '*');
         });
     </script>
 </body>
