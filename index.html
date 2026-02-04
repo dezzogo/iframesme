@@ -17,7 +17,8 @@
     <script>
         // Escuta mensagens vindas do iframe
         window.addEventListener('message', function(event) {
-            alert('O site principal recebeu: ' + event.data);
+            console.log('O site principal recebeu: ' + event.data);
+            dataLayer.push({'event': 'botaoClicado', 'mensagem': event.data});
         });
     </script>
 </body>
