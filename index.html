@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Principal (Pai)</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f0f0f0; padding: 20px; }
+        iframe { width: 300px; height: 200px; border: 2px solid #333; background: white; }
+    </style>
+</head>
+<body>
+    <h1>Este é o site principal</h1>
+    <p>Abaixo está o iframe:</p>
+    
+    <iframe src="botao.html" id="meuIframe"></iframe>
+
+    <script>
+        // Escuta mensagens vindas do iframe
+        window.addEventListener('message', function(event) {
+            alert('O site principal recebeu: ' + event.data);
+        });
+    </script>
+</body>
+</html>

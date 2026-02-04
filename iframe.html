@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão (Filho)</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        button { padding: 10px 20px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <button id="btnTeste">Clique para Testar</button>
+
+    <script>
+        const btn = document.getElementById('btnTeste');
+        
+        btn.addEventListener('click', () => {
+            // Envia uma mensagem para o "Pai" (o site que segura o iframe)
+            window.parent.postMessage('O botão foi clicado!', '*');
+        });
+    </script>
+</body>
+</html>
