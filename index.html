@@ -30,7 +30,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         // Escuta mensagens vindas do iframe
         window.addEventListener('message', function(event) {
             console.log('O site principal recebeu: ' + event.data);
-            dataLayer.push({'event': 'botaoClicado', 'mensagem': event.data});
+            dataLayer.push({
+                'event': 'continuar', 
+                'mensagem': event.data
+            });
         });
     </script>
 </body>
