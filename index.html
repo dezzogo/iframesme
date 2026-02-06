@@ -21,20 +21,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRF7ZNQ2"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <h1>Este é o site principal</h1>
-    <p>Abaixo está o iframe:</p>
+    <h1>Este é o site pai</h1>
+    <p>Abaixo está o iframe/checkout:</p>
     
     <iframe src="iframe.html" id="meuIframe"></iframe>
-
-    <script>
-        // Escuta mensagens vindas do iframe
-        window.addEventListener('message', function(event) {
-            console.log('O site principal recebeu: ' + event.data);
-            dataLayer.push({
-                'event': 'continuar', 
-                'mensagem': event.data
-            });
-        });
-    </script>
 </body>
 </html>
